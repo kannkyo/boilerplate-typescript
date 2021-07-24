@@ -1,15 +1,18 @@
 {
+  "name": "boilerplate-typescript",
   "version": "0.1.0",
+  "repository": "https://github.com/kannkyo/boilerplate-typescript",
+  "author": "kannkyo <15080890+kannkyo@users.noreply.github.com>",
   "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
   "engines": {
     "node": ">=14"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "dist/typescript.esm.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -17,6 +20,16 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "tsdx": "^0.13.3",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "peerDependencies": {},
   "husky": {
     "hooks": {
@@ -28,14 +41,5 @@
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
-  },
-  "name": "typescript",
-  "author": "kannkyo",
-  "module": "dist/typescript.esm.js",
-  "devDependencies": {
-    "husky": "^4.3.0",
-    "tsdx": "^0.13.3",
-    "tslib": "^2.0.1",
-    "typescript": "^4.0.2"
   }
 }
