@@ -1,2 +1,3 @@
 # boilerplate-typescript
-TypeScriptプロジェクト用のボイラープレート
+
+TypeScript プロジェクト用のボイラープレート
