@@ -1,6 +1,6 @@
 {
   "name": "@kannkyo/boilerplate-typescript",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "repository": "https://github.com/kannkyo/boilerplate-typescript",
   "author": "kannkyo <15080890+kannkyo@users.noreply.github.com>",
   "license": "MIT",
@@ -18,6 +18,8 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
+    "push": "git push --follow-tags origin main",
+    "release": "standard-version",
     "prepare": "husky install"
   },
   "devDependencies": {
