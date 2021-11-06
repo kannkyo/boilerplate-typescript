@@ -1,16 +1,17 @@
 {
   "standard.autoFixOnSave": true,
   "standard.usePackageJson": true,
+  "standard.engine": "ts-standard",
   "[javascript]": {
-    "editor.defaultFormatter": "chenxsan.vscode-standardjs"
+    "editor.defaultFormatter": "standard.vscode-standard"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "chenxsan.vscode-standardjs"
+    "editor.defaultFormatter": "standard.vscode-standard"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "chenxsan.vscode-standardjs"
+    "editor.defaultFormatter": "standard.vscode-standard"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "chenxsan.vscode-standardjs"
+    "editor.defaultFormatter": "standard.vscode-standard"
   }
 }
