@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.1](https://github.com/kannkyo/boilerplate-typescript/compare/v0.0.0...v0.0.1) (2021-11-06)
+
+
+### Added
+
+* **npm:** add some packages ([c9965f3](https://github.com/kannkyo/boilerplate-typescript/commit/c9965f3cda01a473b3b533511d4300fcd179574f))
+
 ## 0.0.0 (2021-08-25)
 
 
