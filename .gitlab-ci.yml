@@ -4,9 +4,13 @@ cache:
   paths:
     - node_modules/
 
+include:
+  - template: Security/SAST.gitlab-ci.yml
+
 stages:
   - build
   - test
+  - docs
   - publish
   - deploy
 
@@ -21,7 +25,13 @@ test:
   dependencies:
     - build
   script:
+    - npm install
     - npm run test
+  artifacts:
+    when: always
+    reports:
+      junit: junit.xml
+      cobertura: coverage/clover.xml
 
 outdated:
   stage: test
@@ -35,9 +45,6 @@ sast:
   stage: test
   dependencies:
     - build
-
-include:
-  - template: Security/SAST.gitlab-ci.yml
 
 publish:
   stage: publish
@@ -54,7 +61,7 @@ publish:
       - pack/
 
 jsdoc:
-  stage: publish
+  stage: docs
   dependencies:
     - build
   script:
@@ -66,7 +73,7 @@ jsdoc:
       - public/
 
 dmd:
-  stage: publish
+  stage: docs
   dependencies:
     - build
   script:
@@ -79,8 +86,8 @@ dmd:
       - public/
 
 dockerize:
+  stage: publish
   image: docker:latest
-  stage: build
   services:
     - docker:dind
   before_script:
