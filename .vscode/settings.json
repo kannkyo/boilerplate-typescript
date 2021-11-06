@@ -1,6 +1,7 @@
 {
   "standard.autoFixOnSave": true,
   "standard.usePackageJson": true,
+  "standard.engine": "ts-standard",
   "[javascript]": {
     "editor.defaultFormatter": "chenxsan.vscode-standardjs"
   },
