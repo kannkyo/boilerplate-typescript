@@ -2,5 +2,16 @@
 .github/
 .husky/
 .vscode/
+.gitlab-ci.yml
+*ignore
+*.json
+.npmrc
+*.md
+*.sh
+*.tgz
+docker-compose*
+Dockerfile
+node_modules/
+out/
+src/
 test/
-.versionrc.json
