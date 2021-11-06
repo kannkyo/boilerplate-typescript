@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "christian-kohler.npm-intellisense",
+    "chenxsan.vscode-standardjs",
     "eg2.vscode-npm-script"
   ],
   "unwantedRecommendations": []
