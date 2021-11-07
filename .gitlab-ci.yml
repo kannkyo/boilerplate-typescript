@@ -66,24 +66,25 @@ jsdoc:
     - build
   script:
     - npm run doc
-    - mv out/ public/
+    - mv docs/ public/
   artifacts:
     name: doc
     paths:
       - public/
 
-dmd:
-  stage: docs
-  dependencies:
-    - build
-  script:
-    - npm run dmd
-    - mkdir -p public/
-    - mv api.md public/
-  artifacts:
-    name: dmd
-    paths:
-      - public/
+# FIXME: not support ts
+# dmd:
+#   stage: docs
+#   dependencies:
+#     - build
+#   script:
+#     - npm run dmd
+#     - mkdir -p public/
+#     - mv api.md public/
+#   artifacts:
+#     name: dmd
+#     paths:
+#       - public/
 
 dockerize:
   stage: publish
