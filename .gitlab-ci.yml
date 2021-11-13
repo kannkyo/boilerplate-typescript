@@ -1,12 +1,16 @@
-image: node:14-slim
+image: node:16-slim
 
 cache:
   paths:
     - node_modules/
 
+include:
+  - template: Security/SAST.gitlab-ci.yml
+
 stages:
   - build
   - test
+  - docs
   - publish
   - deploy
 
@@ -21,7 +25,13 @@ test:
   dependencies:
     - build
   script:
+    - npm install
     - npm run test
+  artifacts:
+    when: always
+    reports:
+      junit: junit.xml
+      cobertura: coverage/clover.xml
 
 outdated:
   stage: test
@@ -36,13 +46,11 @@ sast:
   dependencies:
     - build
 
-include:
-  - template: Security/SAST.gitlab-ci.yml
-
 publish:
   stage: publish
   dependencies:
     - build
+  before_script:
   script:
     - npm publish
     - mkdir pack
@@ -54,33 +62,36 @@ publish:
       - pack/
 
 jsdoc:
-  stage: publish
+  stage: docs
   dependencies:
     - build
   script:
+    - npm install
     - npm run doc
-    - mv out/ public/
+    - mv docs/ public/
   artifacts:
     name: doc
     paths:
       - public/
 
-dmd:
-  stage: publish
-  dependencies:
-    - build
-  script:
-    - npm run dmd
-    - mkdir -p public/
-    - mv api.md public/
-  artifacts:
-    name: dmd
-    paths:
-      - public/
+# FIXME: not support ts
+# dmd:
+#   stage: docs
+#   dependencies:
+#     - build
+#   script:
+#     - npm install
+#     - npm run dmd
+#     - mkdir -p public/
+#     - mv api.md public/
+#   artifacts:
+#     name: dmd
+#     paths:
+#       - public/
 
 dockerize:
+  stage: publish
   image: docker:latest
-  stage: build
   services:
     - docker:dind
   before_script:
