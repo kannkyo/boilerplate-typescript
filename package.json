@@ -5,10 +5,7 @@
   "author": "kannkyo <15080890+kannkyo@users.noreply.github.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=14"
-  },
-  "publishConfig": {
-    "access": "public"
+    "node": ">=16"
   },
   "module": "dist/typescript.esm.js",
   "main": "dist/index.js",
@@ -43,6 +40,7 @@
     "jsdoc": "^3.6.6",
     "jsdoc-to-markdown": "^6.0.1",
     "minami": "^1.2.3",
+    "node-notifier": ">=8.0.1",
     "standard-version": "^9.3.1",
     "ts-standard": "^10.0.0",
     "tsdx": "^0.14.1",

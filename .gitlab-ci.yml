@@ -1,4 +1,4 @@
-image: node:14-slim
+image: node:16-slim
 
 cache:
   paths:
@@ -50,6 +50,7 @@ publish:
   stage: publish
   dependencies:
     - build
+  before_script:
   script:
     - npm publish
     - mkdir pack
@@ -65,6 +66,7 @@ jsdoc:
   dependencies:
     - build
   script:
+    - npm install
     - npm run doc
     - mv docs/ public/
   artifacts:
@@ -78,6 +80,7 @@ jsdoc:
 #   dependencies:
 #     - build
 #   script:
+#     - npm install
 #     - npm run dmd
 #     - mkdir -p public/
 #     - mv api.md public/
