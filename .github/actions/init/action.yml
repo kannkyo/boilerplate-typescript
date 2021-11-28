@@ -15,13 +15,6 @@ runs:
         node-version: ${{ inputs.nodejs-version }}
         registry-url: https://npm.pkg.github.com/
         cache: "npm"
-    - name: cache node_modeuls
-      uses: actions/cache@v2
-      id: node_cache_id
-      with:
-        path: node_modeuls/
-        key: node-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
     - name: install
-      if: steps.node_cache_id.outputs.cache-hit != 'true'
       shell: bash
       run: npm ci
