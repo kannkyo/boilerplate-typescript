@@ -1,8 +1,8 @@
 # boilerplate-typescript
 
-## GitHub
-
 TypeScript プロジェクト用のボイラープレート
+
+## GitHub
 
 [![Node.js CI](https://github.com/kannkyo/boilerplate-typescript/actions/workflows/nodejs-ci.yml/badge.svg)](https://github.com/kannkyo/boilerplate-typescript/actions/workflows/nodejs-ci.yml)
 [![Node.js Package](https://github.com/kannkyo/boilerplate-typescript/actions/workflows/nodejs-publish.yml/badge.svg)](https://github.com/kannkyo/boilerplate-typescript/actions/workflows/nodejs-publish.yml)
