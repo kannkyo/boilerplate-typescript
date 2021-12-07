@@ -113,6 +113,7 @@ npm add -D PACKAGE_NAME
 
 ```bash
 npm run release
+npm run push
 ```
 
 このコマンドは以下の処理を実行します。
@@ -120,6 +121,7 @@ npm run release
 1. [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/) に基づくコミット履歴から、[CHANGELOG.md](CHANGELOG.md) を更新します。
 2. [package.json](package.json)の `version` をインクリメントします。
 3. 変更をコミットして、バージョン番号 `1.2.3` の頭に `v` を付けたタグ `v1.2.3` を作成します。
+4. 作成したタグとブランチをリポジトリにプッシュします。
 
 ## Thanks
 
