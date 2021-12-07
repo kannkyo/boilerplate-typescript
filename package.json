@@ -17,7 +17,7 @@
     "lint": "tsdx lint",
     "push": "git push --follow-tags origin main",
     "release": "standard-version",
-    "postinstall": "cyclonedx-bom -o bom.json",
+    "prepack": "cyclonedx-bom -o sbom.xml",
     "prepare": "husky install",
     "doc": "typedoc src",
     "old:doc": "jsdoc -c .jsdoc.json -P package.json -R README.md",
@@ -49,7 +49,7 @@
   },
   "files": [
     "dist",
-    "src"
+    "sbom.xml"
   ],
   "prettier": {
     "printWidth": 80,

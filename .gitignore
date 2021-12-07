@@ -85,4 +85,4 @@ out
 dist
 
 junit.xml
-bom.xml
+sbom.xml
