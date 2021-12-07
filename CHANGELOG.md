@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/kannkyo/boilerplate-typescript/compare/v0.0.3...v0.0.4) (2021-12-07)
+
+
+### Fixed
+
+* fix can't publish ([5efdace](https://github.com/kannkyo/boilerplate-typescript/commit/5efdaced37d5e126b48c07bf964d216203882b81))
+
 ### [0.0.3](https://github.com/kannkyo/boilerplate-typescript/compare/v0.0.2...v0.0.3) (2021-12-07)
 
 
