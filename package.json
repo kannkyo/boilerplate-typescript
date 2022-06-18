@@ -35,7 +35,7 @@
     "@types/debug": "^4.1.7",
     "@types/node": "^16.11.10",
     "cross-env": "^7.0.3",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "jest-junit": "^13.0.0",
     "jsdoc": "^3.6.7",
     "jsdoc-to-markdown": "^7.1.0",
