@@ -27,7 +27,7 @@
   "dependencies": {
     "debug": "^4.3.4",
     "dotenv": "^16.0.1",
-    "typedoc": "^0.22.17"
+    "typedoc": "^0.23.5"
   },
   "devDependencies": {
     "@cyclonedx/bom": "^3.10.1",
