@@ -36,7 +36,7 @@
     "@types/node": "^18.0.0",
     "cross-env": "^7.0.3",
     "husky": "^8.0.1",
-    "jest-junit": "^13.0.0",
+    "jest-junit": "^14.0.0",
     "jsdoc": "^3.6.10",
     "jsdoc-to-markdown": "^7.1.0",
     "minami": "^1.2.3",
