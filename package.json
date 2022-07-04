@@ -33,7 +33,7 @@
     "@cyclonedx/bom": "^3.10.1",
     "@tsconfig/recommended": "^1.0.1",
     "@types/debug": "^4.1.7",
-    "@types/node": "^18.0.0",
+    "@types/node": "^18.0.1",
     "cross-env": "^7.0.3",
     "husky": "^8.0.1",
     "jest-junit": "^14.0.0",
