@@ -14,7 +14,7 @@ jobs:
         uses: ./.github/actions/init
         with:
           nodejs-version: 16.x
-      - uses: oke-py/npm-audit-action@v1.8.2
+      - uses: oke-py/npm-audit-action@v2.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           dedupe_issues: true
